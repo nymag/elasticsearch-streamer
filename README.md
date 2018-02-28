@@ -1,6 +1,6 @@
 # elasticsearch streamer
 
-A cli for streaming docs to and from Elastic indices.
+A command-line interface for streaming docs from Elatic indices and for ptuting docs into indices in bulk.
 
 ## Installation
 
