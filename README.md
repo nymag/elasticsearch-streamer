@@ -37,14 +37,6 @@ Options:
 
 * `batch`: size of bulk batches. Default: `100`.
 
-Bulk results object:
-
-* `status`: String. `success` or `error`.
-* `id`: String. The ID of the inserted document.
-* `elasticHost`: String. The elastic host that the doc was put into.
-* `elasticIndex`: String. The index that the document was put into.
-* `error`: Object. The elastic bulk error.
-
 ## Tips
 
 Use with [jq](https://stedolan.github.io/jq/) to parse and filter JSON.
