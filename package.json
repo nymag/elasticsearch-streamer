@@ -4,7 +4,9 @@
   "description": "A programmatic and command-line interface for streaming docs from Elatic indices and for ptuting docs into indices in bulk.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint",
+    "test": "npm run lint",
+    "lint": "eslint lib/* cmd/* index.js"
   },
   "bin": {
     "ess": "./index.js"
