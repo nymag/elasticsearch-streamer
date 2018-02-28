@@ -2,6 +2,8 @@
 
 A programmatic and command-line interface for streaming docs from Elatic indices and for ptuting docs into indices in bulk.
 
+WARNING: This is in pre-alpha and will not follow semver until 1.0.
+
 ## Installation
 
 `npm install -g elasticsearch-streamer`

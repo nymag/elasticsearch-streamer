@@ -23,12 +23,12 @@ function getSrcStream() {
   const args = getArgs();
 
   switch (args._[0]) {
-    case 'get':
-      return cmdGetDocs(args);
     case 'put':
       return cmdPutDocs(args);
-    default:
+    case 'get':
       return cmdGetDocs(args);
+    default:
+      throw new Error('Command not recognized');
   }
 }
 
