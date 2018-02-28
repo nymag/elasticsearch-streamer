@@ -1,6 +1,6 @@
 # elasticsearch streamer
 
-A cli for streaming docs to and frmo Elastic indices.
+A cli for streaming docs to and from Elastic indices.
 
 ## Installation
 
@@ -18,6 +18,12 @@ Put all docs in a file into index C:
 
 ```
 cat b.txt | ess put localhost:9200/c
+```
+
+Moves docs from Index A to Index B:
+
+```
+ess get localhost:9200/a | ess put localhost:9200/b
 ```
 
 ## Commands
