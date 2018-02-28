@@ -6,27 +6,15 @@ const getArgs = require('./get-args'),
   _ = require('lodash'),
   util = require('../lib/util');
 
-function parseElastic(args) {
-  const split = args._[1].split('/');
-
-  return {
-    index: split[split.length - 1],
-    host: split.slice(0, split.length - 1).join('/')
-  };
-}
-
 function cmdGetDocs(args) {
-  const {host, index} = parseElastic(args);
-
-  return getDocs(host, index, {parse: false, query: args.query});
+  return getDocs(args._[1], {parse: false, query: args.query});
 }
 
 function cmdPutDocs(args) {
-  const {host, index} = parseElastic(args);
 
   return util.readStdin()
     .map(JSON.parse)
-    .through(_.partialRight(putDocs, host, index, args.batch))
+    .through(_.partialRight(putDocs, args._[1], args.batch))
     .map(JSON.stringify);
 }
 
