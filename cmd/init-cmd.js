@@ -1,8 +1,9 @@
+'use strict';
+
 const getArgs = require('./get-args'),
   getDocs = require('../lib/get-docs'),
   putDocs = require('../lib/put-docs'),
   h = require('highland'),
-  urlUtil = require('url'),
   _ = require('lodash'),
   util = require('../lib/util');
 
@@ -26,12 +27,12 @@ function getSrcStream() {
       return cmdGetDocs(args);
     case 'put':
       return cmdPutDocs(args);
+    default:
+      return cmdGetDocs(args);
   }
 }
 
 function initCmd() {
-  const args = getArgs();
-
   return getSrcStream()
     .each(h.log);
 }
