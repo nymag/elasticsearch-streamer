@@ -1,7 +1,7 @@
 {
   "name": "elasticsearch-streamer",
   "version": "0.0.1",
-  "description": "",
+  "description": "A programmatic and command-line interface for streaming docs from Elatic indices and for ptuting docs into indices in bulk.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,7 @@
   "bin": {
     "ess": "./index.js"
   },
-  "author": "",
+  "author": "Chris Kirk",
   "license": "ISC",
   "dependencies": {
     "elasticsearch": "^14.1.0",
@@ -20,5 +20,20 @@
   },
   "devDependencies": {
     "eslint": "^4.17.0"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nymag/elasticsearch-streamer.git"
+  },
+  "keywords": [
+    "elasticsearch",
+    "elastic"
+  ],
+  "bugs": {
+    "url": "https://github.com/nymag/elasticsearch-streamer/issues"
+  },
+  "homepage": "https://github.com/nymag/elasticsearch-streamer#readme"
 }
