@@ -17,7 +17,7 @@ ess get localhost:9200/a > b.txt
 Put all docs in a file into index C:
 
 ```
-cat b.txt | ess put localhost:9200/c
+ess put localhost:9200/c < b.txt
 ```
 
 Moves docs from Index A to Index B:
