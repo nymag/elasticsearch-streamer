@@ -10,14 +10,25 @@ WARNING: This is in pre-alpha and will not follow semver until 1.0.
 
 ## Usage
 
-Saves all docs in Index A to a file: `ess get localhost:9200/a > b.txt`
+Save all docs in Index A to a file:
 
-Put all docs in a file into index C: `ess put localhost:9200/c < b.txt`
+    ess get localhost:9200/a > b.txt
+
+Put all docs in a file into Index C:
+    
+    ess put localhost:9200/c < b.txt
 
 Moves docs from Index A to Index B:
     
     ess get localhost:9200/a | ess put localhost:9200/b
 
+Move docs from host1's index A to host2's index A:
+
+    ess get host1:9200/a | ess put host2:9200
+
+Move docs from host1's indices into the same indices at host2:
+
+    ess get host1:9200 | ess put host2:9200
 
 ## Commands
 
