@@ -4,7 +4,7 @@ const yargs = require('yargs');
 
 module.exports = () => yargs
   .command('get', 'gets docs from index', yargs => yargs
-    .coerce('query', val => JSON.parse(val))
+    .coerce('options', JSON.parse)
   )
   .command('put', 'put docs into index', yargs =>
     yargs

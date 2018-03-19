@@ -8,7 +8,10 @@ const getArgs = require('./get-args'),
   util = require('../lib/util');
 
 function cmdGetDocs(args) {
-  return getDocs(args._[1], {parse: false, query: args.query});
+  return getDocs(args._[1], {
+    parse: false,
+    options: args.options
+  });
 }
 
 function cmdPutDocs(args) {
