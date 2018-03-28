@@ -10,7 +10,7 @@ const getArgs = require('./get-args'),
 function cmdGetDocs(args) {
   return getDocs(args._[1], {
     parse: false,
-    options: args.options
+    search: args.search
   });
 }
 
