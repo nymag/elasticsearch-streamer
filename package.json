@@ -33,7 +33,16 @@
   },
   "keywords": [
     "elasticsearch",
-    "elastic"
+    "elastic",
+    "search",
+    "migration",
+    "bulk",
+    "batch",
+    "stream",
+    "scroll"
+    "cli",
+    "command line",
+    "dump"
   ],
   "bugs": {
     "url": "https://github.com/nymag/elasticsearch-streamer/issues"
