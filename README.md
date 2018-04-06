@@ -40,7 +40,7 @@ Streams documents out of the specified Elastic index endpoint as JSON.
 
 Options:
 
-* `search`: Client search options as JSON, e.g. `{"body": {"query": {"term": {"foo": "bar"}}}}`. Passed directly to `client.search`; see [https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html#api-search](ElasticSearch's Javascript API docs). `scroll` defaults to `10s` and `size` to `100`.
+* `search`: Client search options as JSON, e.g. `{"body": {"query": {"term": {"foo": "bar"}}}}`. Passed directly to `client.search`; see [ElasticSearch's Javascript API docs](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html#api-search). `scroll` defaults to `10s` and `size` to `100`.
 
 ### put
 
