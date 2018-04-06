@@ -1,8 +1,6 @@
 # elasticsearch streamer
 
-A programmatic and command-line interface for streaming docs from Elatic indices and for ptuting docs into indices in bulk.
-
-WARNING: This is in pre-alpha and will not follow semver until 2.0.
+A programmatic and command-line utility for streaming docs from Elasticsearch indices and putting docs into indices in bulk.
 
 ## Installation
 
