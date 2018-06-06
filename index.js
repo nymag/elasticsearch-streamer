@@ -7,3 +7,5 @@ const initCmd = require('./cmd/init-cmd'),
 if (runningAsScript) initCmd();
 module.exports.get = require('./lib/get-docs');
 module.exports.put = require('./lib/put-docs');
+module.exports.delete = require('./lib/delete-docs');
+module.exports.upsert = require('./lib/upsert-docs');
