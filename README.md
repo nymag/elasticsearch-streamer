@@ -30,7 +30,7 @@ Move docs from host1's indices into the same indices at host2:
 
 Stream all docs where `foo` is `bar`:
 
-    ess get localhost:9200/a --search `{"body": {"query": {"term": {"foo": "bar"}}}}`
+    ess get localhost:9200/a --search '{"body": {"query": {"bool": {"filter": {"term": {"foo": "bar"}}}}}}'
 
 ## Commands
 
@@ -40,7 +40,7 @@ Streams documents out of the specified Elastic index endpoint as JSON.
 
 Options:
 
-* `search`: Client search options as JSON, e.g. `{"body": {"query": {"term": {"foo": "bar"}}}}`. Passed directly to `client.search`; see [ElasticSearch's Javascript API docs](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html#api-search). `scroll` defaults to `10s` and `size` to `100`.
+* `search`: Client search options as JSON, e.g. `{"body": {"query": {"bool": {"filter": {"term": {"foo": "bar"}}}}}}`. Passed directly to `client.search`; see [ElasticSearch's Javascript API docs](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html#api-search). `scroll` defaults to `10s` and `size` to `100`.
 
 ### put
 
