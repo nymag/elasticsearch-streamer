@@ -10,7 +10,8 @@ const getArgs = require('./get-args'),
 function cmdGetDocs(args) {
   return getDocs(args._[1], {
     parse: false,
-    search: args.search
+    search: args.search,
+    requestTimeout: args.timeout
   });
 }
 
@@ -18,7 +19,7 @@ function cmdPutDocs(args) {
 
   return util.readStdin()
     .map(JSON.parse)
-    .through(_.partialRight(putDocs, args._[1], { batch: args.batch }))
+    .through(_.partialRight(putDocs, args._[1], { batch: args.batch, requestTimeout: args.timeout }))
     .map(JSON.stringify);
 }
 
