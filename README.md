@@ -40,7 +40,8 @@ Streams documents out of the specified Elastic index endpoint as JSON.
 
 Options:
 
-* `search`: Client search options as JSON, e.g. `{"body": {"query": {"bool": {"filter": {"term": {"foo": "bar"}}}}}}`. Passed directly to `client.search`; see [ElasticSearch's Javascript API docs](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html#api-search). `scroll` defaults to `10s` and `size` to `100`.
+* `--search`: Client search options as JSON, e.g. `{"body": {"query": {"bool": {"filter": {"term": {"foo": "bar"}}}}}}`. Passed directly to `client.search`; see [ElasticSearch's Javascript API docs](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html#api-search). `scroll` defaults to `10s` and `size` to `100`.
+* `--timeout`: Set the timeout for the Elastic client (in ms).
 
 ### put
 
@@ -48,7 +49,8 @@ Put documents (as JSON strings) from stdin into the specified Elastic index endp
 
 Options:
 
-* `batch`: size of bulk batches. Default: `100`.
+* `--batch`: size of bulk batches. Default: `100`.
+* `--timeout`: Set the timeout for the Elastic client (in ms).
 
 ## Tips
 
