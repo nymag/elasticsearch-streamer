@@ -19,7 +19,7 @@ function cmdPutDocs(args) {
 
   return util.readStdin()
     .map(JSON.parse)
-    .through(_.partialRight(putDocs, args._[1], { batch: args.batch, requestTimeout: args.timeout }))
+    .through(_.partialRight(putDocs, args._[1], { batch: args.batch, requestTimeout: args.timeout, update: args.update }))
     .map(JSON.stringify);
 }
 
