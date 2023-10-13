@@ -11,5 +11,6 @@ module.exports = () => yargs
     yargs
       .number('batch')
       .number('timeout')
+      .boolean('update')
   )
   .argv;
